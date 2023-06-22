@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+@{
+    List<Produto> itens = ViewBag.novo;
+}
+<link href="~/css/produtodisp.css" rel="stylesheet" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Disponíveis</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Produtos Disponíveis</h1>
+
+        <form class="search-form" method="GET" action="/Home/ProdutosDisp">
+            <input type="text" name="pesquisa" placeholder="Pesquisar por nome ou preço">
+            <input type="submit" value="Pesquisar">
+
+        </form>
+        <form class="search-form" method="GET" action="/Home/ProdutosDisp">
+
+
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="pesquisa">
+                <option value="">Todas as categorias</option>
+                <option value="categoriaa">Categoria 1</option>
+                <option value="categoriab">Categoria 2</option>
+                <option value="categoriac">Categoria 3</option>
+            </select>
+
+            <input type="submit" value="Pesquisar">
+        </form>
+
+        @foreach (var item in itens)
+        {
+            <div class="product">
+                <img src="~/furadeira.png" alt="Nome do Produto">
+                <h2>@item.nome Nome do Produto 1</h2>
+                <p>@item.descricao Descrição curta do produto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p class="price">@item.preco Preço: R$99,00</p>
+                <p class="price">@item.categoria</p>
+                <a href="#" class="button">Comprar Agora</a>
+            </div>
+        }
+    </div>
+</body>
+</html>

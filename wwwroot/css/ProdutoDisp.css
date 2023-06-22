@@ -1,0 +1,93 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #222;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.product {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 4px;
+}
+
+    .product img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 4px;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+
+    .product h2 {
+        margin-top: 20px;
+        color: #fff;
+        font-size: 24px;
+    }
+
+    .product p {
+        margin-top: 10px;
+        color: #ccc;
+    }
+
+        .product p.price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+    .button:hover {
+        background-color: #45a049;
+    }
+
+.search-form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+    .search-form input[type="text"] {
+        padding: 5px;
+        width: 300px;
+        border: none;
+        border-radius: 4px;
+    }
+
+    .search-form input[type="submit"] {
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .search-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }

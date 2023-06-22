@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #444;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            background-color: #666;
+            color: #fff;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <form action="/home/salvar">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="imagem">Imagem:</label>
+        <input type="file" id="imagem" name="imagem" required>
+
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" required></textarea>
+
+        <label for="preco">Preço:</label>
+        <input type="text" id="preco" name="preco" required>
+
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria" required>
+            <option value="categoriaa">Categoria 1</option>
+            <option value="categoriab">Categoria 2</option>
+            <option value="categoriac">Categoria 3</option>
+        </select>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>
